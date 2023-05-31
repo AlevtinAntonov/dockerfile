@@ -4,6 +4,7 @@ import tkinter as tk
 from tkinter import messagebox
 from minimax_algorithm import get_symbol, find_best_move, update_state, is_draw
 
+
 sys.setrecursionlimit(10000)
 
 
