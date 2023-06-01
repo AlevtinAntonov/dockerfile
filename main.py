@@ -1,12 +1,15 @@
 import random as r
 import sys
+import os
 import tkinter as tk
 from tkinter import messagebox
 from minimax_algorithm import get_symbol, find_best_move, update_state, is_draw
 
 
 sys.setrecursionlimit(10000)
-
+if os.environ.get('DISPLAY','') == '':
+    print('no display found. Using :0.0')
+    os.environ.__setitem__('DISPLAY', ':0.0')
 
 def build_gui(dim):
     root = tk.Tk()
